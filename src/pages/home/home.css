@@ -1,0 +1,75 @@
+.home-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+button {
+  color: black;
+}
+
+.home-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Controls spacing between text */
+  text-align: center;
+}
+
+.home-copy-wrapper:nth-child(1) h1 {
+  font-family: var(--p-font2);
+  
+  font-size: 6rem;
+  margin: 0;
+}
+
+.home-copy-wrapper:nth-child(2) h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+
+.ticket-selection {
+  cursor: pointer;
+  padding: 1.2rem 2.2rem;
+  border: none;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 900px) {
+  .home-copy-wrapper:nth-child(1) h1 {
+    font-size: 40px;
+  }
+
+  .home-copy-wrapper:nth-child(2) h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-copy-wrapper:nth-child(1) h1 {
+    font-size: 25px;
+  }
+
+  .home-copy-wrapper:nth-child(2) h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .home-copy-wrapper:nth-child(1) h1 {
+    font-size: 20px;
+  }
+
+  .home-copy-wrapper:nth-child(2) h1 {
+    font-size: 2.5rem;
+  }
+}
