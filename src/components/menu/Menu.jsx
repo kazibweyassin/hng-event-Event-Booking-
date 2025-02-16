@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
 import "./menu.css";
 
 const Menu = () => {
