@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from "react";
 import { FormContext } from "../../context/FormContext";
 import html2canvas from "html2canvas";
-import "./ready.css"; // Create your own styling as needed
+import "./ready.css"; 
 
 const Ready = () => {
   const { formData } = useContext(FormContext);

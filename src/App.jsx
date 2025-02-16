@@ -12,10 +12,10 @@ function App() {
     <>
       <Menu />
       <FormProvider>
-          <Routes location={location} key={location.pathname}>
-            <Route index element={<Home />} />
-            <Route path="/ticket" element={<Ticket />} />
-          </Routes>
+        <Routes location={location} key={location.pathname}>
+          <Route index element={<Home />} />
+          <Route path="/ticket" element={<Ticket />} />
+        </Routes>
       </FormProvider>
     </>
   );

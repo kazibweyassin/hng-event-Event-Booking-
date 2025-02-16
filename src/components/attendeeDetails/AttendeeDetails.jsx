@@ -13,19 +13,19 @@ const AttendeeDetails = () => {
     let newErrors = {};
     if (!formData.name) newErrors.name = "Name is required.";
     if (!formData.email) {
-      newErrors.email = "Email is required.";
+      newErrors.email = "Email is Mandoary.";
     } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
       newErrors.email = "Enter a valid email address.";
     }
     if (!formData.avatar) {
-      newErrors.avatar = "Please upload an image.";
+      newErrors.avatar = "Please upload A valid image.";
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleNext = () => {
-    console.log("Next button clicked");
+    console.log("clicked");
     if (validateForm()) {
       setTimeout(() => {
         nextStep();
@@ -54,7 +54,7 @@ const AttendeeDetails = () => {
     if (!allowedTypes.includes(file.type)) {
       setErrors((prev) => ({
         ...prev,
-        avatar: "Only PNG, JPG, and GIF images are allowed.",
+        avatar: "Only PNG, JPG, and GIF images  allowed.",
       }));
       return;
     }
@@ -99,7 +99,7 @@ const AttendeeDetails = () => {
 
   const handleFileInputChange = (event) => {
     const file = event.target.files[0];
-    console.log("Selected file:", file);
+    console.log("File Selected:", file);
     if (file) {
       handleImageUpload(file);
     }
@@ -155,7 +155,7 @@ const AttendeeDetails = () => {
                   <img src={cloudIcon} alt="Upload icon" width={30} />
                   <p>
                     {uploading
-                      ? "Uploading..."
+                      ? "Uploading to profle..."
                       : "Drag & drop or click to upload"}
                   </p>
                 </>
@@ -183,7 +183,7 @@ const AttendeeDetails = () => {
           <p>Enter your email *</p>
           <input
             type="email"
-            placeholder="✉️ hello@avioflagos.io"
+            placeholder="✉️ example@com"
             value={formData.email || ""}
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
