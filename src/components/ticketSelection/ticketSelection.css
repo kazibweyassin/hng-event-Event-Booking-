@@ -9,7 +9,17 @@ p,
 h2 {
     color: white;
 }
-
+@media (max-width: 768px) {
+    .form-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .form-header h2 {
+        font-size: 24px;
+    }
+}
 .form-header p {
     white-space: nowrap;
     font-family: var(--p-font2);
@@ -142,14 +152,14 @@ h2 {
 .ticket-type-box p:last-child {
     font-family: var(--p-font2);
     font-size: 14px;
-    color: #fff;
+    color: #a2dde7;
     font-weight: 300;
 }
 
 .ticket-amount p {
     font-family: var(--p-font2);
     font-size: 16px;
-    color: #fff;
+    color: #a2dde7;
 }
 
 .ticket-amount select {
@@ -201,7 +211,7 @@ select::-ms-expand {
 
 .form-btn .next-btn {
     background: #24A0B5;
-    color: white;
+    color: #a2dde7;
 }
 
 @media(max-width: 662px) {
